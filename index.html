@@ -3,9 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Earth Day</title>
+
+    <!-- google fonts cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind & DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/styles/style.css">
+
 </head>
 <body>
+
+    <div class="navbar bg-green-700 shadow-sm">
+        <div class="navbar-start">
+            <div class="dropdown text-red-700">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>About</a></li>
+                        <li><a>Gallery</a></li>
+                        <li><a>Plant a Tree</a></li>
+                    </ul>
+            </div>
+            <a class="text-xl text-white ">Green Earth</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-white">
+                <li><a>About</a></li>
+                <li><a>Gallery</a></li>
+                <li><a>Plant a Tree</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-warning rounded-full">Plant a Tree</a>
+        </div>
+</div>
+
     
 </body>
 </html>
+
+<!-- https://github.com/programming-hero-web-course2/b12-green-eaarth-Taoshif1 -->
+
+<!-- 🌴 API Endpoints
+Get 🌴All Plants
+https://openapi.programming-hero.com/api/plants
+Get 🌴All categories
+https://openapi.programming-hero.com/api/categories
+Get 🌴plants by categories
+https://openapi.programming-hero.com/api/category/${id}
+https://openapi.programming-hero.com/api/category/1
+Get 🌴Plants Detail
+https://openapi.programming-hero.com/api/plant/${id}
+https://openapi.programming-hero.com/api/plant/1
+✅ Main Requirements
+1) Navbar
+Website logo/name on the left
+Menu items in the center
+Plant a Tree button on the right
+2) Banner
+A background image
+A title and subtitle
+A centered button
+3) About Campaign
+Section heading
+Image on the left, text on the right
+4) Our Impact Section
+Show 3 cards with campaign statistics
+5) Plant a Tree Today Section & Footer
+Form: Name, Email, Number of Trees
+Footer with copyright info
+6) Responsiveness
+Website must be mobile responsive
+7) Create a README file to answer the following question-
+1) What is the difference between var, let, and const?
+2) What is the difference between map(), forEach(), and filter()?
+3) What are arrow functions in ES6?
+4) How does destructuring assignment work in ES6?
+5) Explain template literals in ES6. How are they different from string concatenation?
+⚙️ Functionalities
+Category Loading Load Tree Categories dynamically on the left side.
+
+Category Click → Tree Data On clicking a category: load trees of that category.
+
+Display in a 3-column card layout.
+
+Card Contents Each card includes:
+
+ - Image
+
+ -  Name
+
+ - Short description
+
+ - Category
+
+ - Price
+
+ - Add to Cart button
+Modal on Card Click Clicking a tree name on a card opens a modal with full tree details.
+
+🧪 Challenges
+1) Add to Cart 
+Clicking Add to Cart: - Adds the tree to Cart List
+                      - Shows tree name 
+
+2) Total Calculation 
+Calculate total price of trees in cart.
+
+3) Remove from Cart 
+Clicking ❌ removes tree and deducts price from total.
+
+4) Loading Spinner
+Show spinner while data is loading.
+
+5) Active Button State 
+Highlight active category button when selected.
+🧰 Technology Stack:
+
+    HTML
+
+    CSS (Vanilla / Tailwind / DaisyUI)
+
+    JavaScript (Vanilla only, no frameworks)
+📌 Rules ✅ At least 5 meaningful commits
+
+❌ No dummy text or Lorem Ipsum — must use relevant content
+
+🔗 Submission
+Live Netlify Link : https://greenearthh.netlify.app/ 
+GitHub Private Repository: https://github.com/programming-hero-web-course2/b12-green-eaarth-Taoshif1
+--->
