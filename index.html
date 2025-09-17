@@ -54,11 +54,10 @@
         </div>
     </div>
 
-
     <!-- hero section starts here -->
     <div class="bg-green-100 flex flex-col md:flex-row items-center justify-between">
         <div>
-            <img src="/assets/hero-leaf1.png" alt="image">
+            <img src="./assets/hero-leaf1.png" alt="image">
         </div>
         <div class="flex flex-col items-center text-center px-5">
             <h1 class="text-4xl font-bold p-4">Plant a Tree, Grow a Future</h1>
@@ -67,28 +66,161 @@ generations.</p>
             <button class="btn btn-warning rounded-full  text-green-700 p-5 m-3">Get Involved</button>
         </div>
         <div flex class="">
-            <img src="/assets/hero-leaf2.png" class="" alt="image">
+            <img src="./assets/hero-leaf2.png" class="" alt="image">
         </div>
 
     </div>
 
-    
+
+
+    <!-- Grid: Categories | Products | Cart -->
+    <div class="mx-auto my-10 p-10">
+        <h2 class="text-4xl font-bold text-center mb-10">Choose Your Trees</h2>
+
+        <div class="flex flex-col md:flex-row gap-6 mt-8">
+
+    <!-- dynamic categories (left) -->
+        <aside class="w-full md:w-1/5 p-4 ">
+            <h3 class="font-semibold mb-2 text-xl">Categories</h3>
+            <ul id="categories-list">
+            <!-- Categories will be dynamically loaded here -->
+            </ul>
+        </aside>
+
+        <!-- Spinner -->
+            <div id="trees-spinner" class="hidden flex justify-center items-center py-10 w-full">
+                <span class="loading loading-spinner loading-lg text-green-700"></span>
+            </div>
+
+        <!-- Tree Cards (middle) -->
+        <div id="trees-container" class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Tree cards will be dynamically loaded here -->
+        </div>
+
+        <!-- Cart (right) -->
+        <aside class="w-full md:w-1/5 p-4 ">
+            <h3 class="font-semibold mb-2 text-xl">Cart</h3>
+            <ul id="cart-items">
+                <!-- Cart items will appear here -->
+            </ul>
+            <p class="mt-4 font-bold">Total: <span id="cart-total">৳ 0</span></p>
+        </aside>
+        </div>
+    </div>
+
+
+    <!-- about the campaign section starts here -->
+    <section class="w-10/12 md:w-8/12 mx-auto my-16">
+        
+        <h2 class="text-4xl font-bold text-center mb-10">About the Campaign</h2>
+
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <!-- Left Image -->
+            <div class="flex-1">
+                <img src="./assets/about.png" alt="About Campaign" class="max-w-full h-auto rounded-lg shadow-lg">
+            </div>
+
+            <!-- Right Content -->
+            <div class="flex-1 text-gray-500">
+                <p class="mb-4 text-xl">
+                Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming. Together, we can make a lasting impact on our planet. Join us in planting a tree today for a greener tomorrow.</p>
+
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Restoration of natural habitats</li>
+                    <li>Improvement of air quality</li>
+                    <li>Support for local communities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- our impact section starts here  -->
+    <section class="bg-green-200 py-16">
+        <h2 class="text-4xl font-bold text-center mb-10">Our Impact</h2>
+        <div class="w-10/12 md:w-8/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="text-green-700 mb-4">
+                    <i class="fas fa-tree fa-3x"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">500K+</h3>
+                <p class="text-gray-500">Trees Planted</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="text-green-700 mb-4">
+                    <i class="fas fa-leaf fa-3x"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">1.2K+</h3>
+                <p class="text-gray-600">Volunteers Engaged</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="text-green-700 mb-4">
+                    <i class="fas fa-globe fa-3x"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">50+</h3>
+                <p class="text-gray-500">Countries Involved</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- plant a tree today section starts here -->
+    <section class="bg-green-800 p-20">
+        <h2 class="text-4xl font-bold text-center text-white mb-8">Plant a Tree Today</h2>
+        <form class="max-w-lg mx-auto mt-8 bg-green-700 p-6 rounded-xl shadow-lg text-gray-700">
+            <div class="mb-4 bg-white rounded">
+                <input type="text" id="name" class="border border-gray-300 p-2 w-full rounded-lg" placeholder="Your Name" required>
+            </div>
+            <div class="mb-4 bg-white rounded">
+                <input type="email" id="email" class="border border-gray-300 p-2 w-full rounded-lg" placeholder="Your Email" required>
+            </div>
+            
+            <!-- Number of Trees (Dropdown) -->
+            <div class="mb-4 bg-white rounded">
+                <select id="trees" class="border border-gray-300 p-2 w-full rounded-lg" required>
+                    <option value="" disabled selected>Select Number of Trees</option>
+                    <option value="1">1 Tree</option>
+                    <option value="5">5 Trees</option>
+                    <option value="10">10 Trees</option>
+                    <option value="20">20 Trees</option>
+                    <option value="50">50 Trees</option>
+                    <option value="100">100 Trees</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-warning rounded-full w-full text-green-700">Donate Now</button>
+        </form>
+    </section>
+
+    <!-- footer section starts here -->
+    <footer class="bg-green-900 text-white text-center p-4">
+        <p>&copy; 2025 Green Earth. All Rights Reserved. Made by Taoshiflex with love &hearts;</p>
+    </footer>
+
+    <!-- Modal -->
+<div id="tree-modal" class="fixed inset-0  hidden z-50 flex justify-center items-center">
+  <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
+    <button id="modal-close" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">✖</button>
+    <img id="modal-img" class="w-full h-60 object-cover rounded-lg mb-4" src="" alt="">
+    <h2 id="modal-name" class="text-2xl font-bold mb-2"></h2>
+    <p id="modal-desc" class="text-gray-700 mb-3"></p>
+    <p class="text-sm text-green-700 mb-2">Category: <span id="modal-category"></span></p>
+    <p class="text-lg font-bold mb-4">Price: <span id="modal-price"></span></p>
+    <button id="modal-add" class="btn bg-green-700 text-white rounded-full w-full">Add to Cart</button>
+  </div>
+</div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
 
 <!-- https://github.com/programming-hero-web-course2/b12-green-eaarth-Taoshif1 -->
 
-<!-- 🌴 API Endpoints
-Get 🌴All Plants
-https://openapi.programming-hero.com/api/plants
-Get 🌴All categories
-https://openapi.programming-hero.com/api/categories
-Get 🌴plants by categories
-https://openapi.programming-hero.com/api/category/${id}
-https://openapi.programming-hero.com/api/category/1
-Get 🌴Plants Detail
-https://openapi.programming-hero.com/api/plant/${id}
-https://openapi.programming-hero.com/api/plant/1
+<!-- 
 ✅ Main Requirements
 1) Navbar
 Website logo/name on the left
@@ -108,62 +240,12 @@ Form: Name, Email, Number of Trees
 Footer with copyright info
 6) Responsiveness
 Website must be mobile responsive
-7) Create a README file to answer the following question-
-1) What is the difference between var, let, and const?
-2) What is the difference between map(), forEach(), and filter()?
-3) What are arrow functions in ES6?
-4) How does destructuring assignment work in ES6?
-5) Explain template literals in ES6. How are they different from string concatenation?
-⚙️ Functionalities
-Category Loading Load Tree Categories dynamically on the left side.
 
-Category Click → Tree Data On clicking a category: load trees of that category.
 
-Display in a 3-column card layout.
-
-Card Contents Each card includes:
-
- - Image
-
- -  Name
-
- - Short description
-
- - Category
-
- - Price
-
- - Add to Cart button
-Modal on Card Click Clicking a tree name on a card opens a modal with full tree details.
-
-🧪 Challenges
-1) Add to Cart 
-Clicking Add to Cart: - Adds the tree to Cart List
-                      - Shows tree name 
-
-2) Total Calculation 
-Calculate total price of trees in cart.
-
-3) Remove from Cart 
-Clicking ❌ removes tree and deducts price from total.
-
-4) Loading Spinner
-Show spinner while data is loading.
-
-5) Active Button State 
-Highlight active category button when selected.
-🧰 Technology Stack:
-
-    HTML
-
-    CSS (Vanilla / Tailwind / DaisyUI)
-
-    JavaScript (Vanilla only, no frameworks)
 📌 Rules ✅ At least 5 meaningful commits
 
 ❌ No dummy text or Lorem Ipsum — must use relevant content
 
 🔗 Submission
 Live Netlify Link : https://greenearthh.netlify.app/ 
-GitHub Private Repository: https://github.com/programming-hero-web-course2/b12-green-eaarth-Taoshif1
---->
+GitHub Private Repository: https://github.com/programming-hero-web-course2/b12-green-eaarth-Taoshif1 -->
